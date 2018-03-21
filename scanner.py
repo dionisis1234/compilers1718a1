@@ -48,7 +48,7 @@ def scan(text,transition_table,accept_states):
 
 
 # the transition table, as a dictionary
-td = { 'q0':{ '0':'q1','1':'q1','3':'q2','4':'q2','5':'q2','2':'q2','2':'q2','9':'q2','2':'q3' },
+td = { 'q0':{ '0':'q1','1':'q1','2':'q3','3':'q2','4':'q2','5':'q2','6':'q2','7':'q2','8':'q2','9':'q2' },
        'q1':{ '1':'q2','2':'q2','3':'q2','4':'q2','0':'q2','5':'q2','6':'q2','7':'q2','8':'q2','9':'q2','.':'q4',':':'q4' },
        'q2':{ '.':'q4',':':'q4' },
 	   'q3':{ '0':'q2','1':'q2','2':'q2','3':'q2','.':'q4',':':'q4'},
@@ -84,4 +84,3 @@ while text:	# that is, while len(text)>0
 	file.write("token: "+token+"string: "+text[:position]+"\n\n")
 	# remaining text for next scan
 	text = text[position:]
-
